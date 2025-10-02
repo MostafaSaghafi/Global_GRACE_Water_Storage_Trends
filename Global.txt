@@ -1,0 +1,171 @@
+CALCULATING LINEAR TRENDS FOR EACH MASCON
+======================================================================
+This will take 2-3 minutes to compute trends globally...
+Running linear regression...
+✓ Linear regression complete!
+  Trend band name: ['trend']
+✓ Statistical metrics calculated!
+
+======================================================================
+ANALYZING GLOBAL PATTERNS
+======================================================================
+
+Regional average trends (cm/year):
+
+Region                    Trend (cm/yr)   Interpretation
+----------------------------------------------------------------------
+Greenland                   -5.610        Strong water loss ⚠️
+Antarctica                No data        
+Amazon Basin                 0.006        Relatively stable ➡️
+Central Africa               0.763        Water gain 📈
+India/South Asia            -0.210        Relatively stable ➡️
+Western US                  -0.280        Relatively stable ➡️
+Central Asia                -0.678        Moderate water loss 📉
+Australia                    0.184        Relatively stable ➡️
+Northern Canada             -1.133        Strong water loss ⚠️
+Sahel                        0.390        Water gain 📈
+Middle East                 -0.755        Moderate water loss 📉
+California                  -0.563        Moderate water loss 📉
+
+======================================================================
+
+======================================================================
+SAMPLING DATA FOR VISUALIZATION
+======================================================================
+Creating sample grid with optimized spacing...
+  Created 5880 sample points
+Sampling trend values efficiently using sampleRegions...
+This will take 1-2 minutes...
+Fetching data from Earth Engine...
+(If you see retry warnings, don't worry - Earth Engine will automatically retry)
+Error fetching data: Collection query aborted after accumulating over 5000 elements.
+Trying with even fewer points...
+  Created 3330 sample points
+✓ Successfully fetched 3330 samples!
+Converting to pandas DataFrame...
+✓ Successfully processed 3330 points
+
+Trend statistics from sampled data:
+count    3330.000000
+mean       -0.167696
+std         3.585629
+min      -117.588422
+25%         0.044624
+50%         0.191248
+75%         0.276529
+max         6.317003
+
+======================================================================
+CLIMATE PHENOMENA AND LARGE-SCALE PATTERNS
+======================================================================
+
+🌍 KEY FINDINGS AND INTERPRETATIONS:
+
+1. STRONGEST WATER LOSSES (RED REGIONS):
+   • Greenland: -5.61 cm/year
+   • Northern Canada: -1.13 cm/year
+   • Middle East: -0.75 cm/year
+   • Central Asia: -0.68 cm/year
+   • California: -0.56 cm/year
+
+2. STRONGEST WATER GAINS (BLUE REGIONS):
+   • Central Africa: 0.76 cm/year
+
+3. RELATIVELY STABLE REGIONS (WHITE AREAS):
+   • Amazon Basin: 0.01 cm/year
+   • India/South Asia: -0.21 cm/year
+   • Western US: -0.28 cm/year
+   • Australia: 0.18 cm/year
+
+4. CONNECTIONS TO CLIMATE PHENOMENA:
+
+   🌊 ENSO (El Niño-Southern Oscillation) Impacts:
+      - Amazon Basin: Interannual variability linked to ENSO cycles
+      - Drought periods in SE Asia during strong El Niño events
+      - Increased rainfall in western South America during El Niño
+      - Australia: Wet La Niña vs dry El Niño patterns
+
+   ❄️ GLACIER AND ICE SHEET MELT:
+      - Greenland: Strong negative trends from ice sheet melting
+      - Antarctica: Regional variations (West vs East Antarctic)
+      - Central Asia: Mountain glacier melt (Tien Shan, Pamir)
+      - Andes, Himalayas, Alps: Visible glacier retreat signals
+
+   🏜️ DROUGHT AND GROUNDWATER DEPLETION:
+      - Western US: Prolonged megadrought since ~2000
+      - California: Severe groundwater extraction
+      - India (NW): Intensive irrigation-driven depletion
+      - Middle East: Unsustainable groundwater use
+      - Mediterranean: Declining water storage
+
+   💧 PRECIPITATION AND HYDROLOGICAL CHANGES:
+      - Sahel: Recovery from historical droughts (1970s-80s)
+      - Northern high latitudes: Increased precipitation
+      - Some tropical regions: Enhanced monsoon intensity
+      - Parts of Central Africa: Rainfall variability
+
+======================================================================
+SPATIAL PATTERNS SUMMARY
+======================================================================
+
+Global distribution of trends:
+category
+Strong Loss       158
+Moderate Loss     234
+Stable           2250
+Moderate Gain     620
+Strong Gain        68
+Name: count, dtype: int64
+
+Percentage with significant loss (< -0.3 cm/yr): 11.8%
+Percentage with significant gain (> 0.3 cm/yr): 20.7%
+Percentage relatively stable (-0.3 to 0.3): 67.6%
+
+======================================================================
+HOTSPOT IDENTIFICATION
+======================================================================
+
+🔴 TOP 10 STRONGEST LOSS HOTSPOTS:
+   Lat:   76.0°, Lon:   -68.0° | Trend: -117.59 cm/year
+   Lat:   76.0°, Lon:   -60.0° | Trend: -117.59 cm/year
+   Lat:   80.0°, Lon:    24.0° | Trend: -37.99 cm/year
+   Lat:   68.0°, Lon:   -48.0° | Trend: -31.36 cm/year
+   Lat:   68.0°, Lon:   -44.0° | Trend: -31.36 cm/year
+   Lat:   68.0°, Lon:   -32.0° | Trend: -28.01 cm/year
+   Lat:   72.0°, Lon:   -52.0° | Trend: -27.66 cm/year
+   Lat:   64.0°, Lon:   -44.0° | Trend: -26.75 cm/year
+   Lat:   76.0°, Lon:   -56.0° | Trend: -26.30 cm/year
+   Lat:   76.0°, Lon:   -52.0° | Trend: -26.30 cm/year
+
+🔵 TOP 10 STRONGEST GAIN HOTSPOTS:
+   Lat:    4.0°, Lon:   100.0° | Trend: 6.32 cm/year
+   Lat:   36.0°, Lon:   148.0° | Trend: 4.87 cm/year
+   Lat:    0.0°, Lon:    32.0° | Trend: 4.50 cm/year
+   Lat:   76.0°, Lon:   -44.0° | Trend: 3.96 cm/year
+   Lat:   76.0°, Lon:   -40.0° | Trend: 3.96 cm/year
+   Lat:   76.0°, Lon:   -36.0° | Trend: 3.96 cm/year
+   Lat:   -4.0°, Lon:    32.0° | Trend: 2.84 cm/year
+   Lat:    0.0°, Lon:    92.0° | Trend: 2.83 cm/year
+   Lat:   72.0°, Lon:   -36.0° | Trend: 2.82 cm/year
+   Lat:   72.0°, Lon:   -32.0° | Trend: 2.82 cm/year
+
+======================================================================
+EXPORTING DATA
+======================================================================
+✓ Saved: grace_global_trends_sampled.csv
+✓ Saved: grace_regional_trends.csv
+
+======================================================================
+ANALYSIS COMPLETE!
+======================================================================
+
+📊 Summary:
+  • Analyzed 238 GRACE images over 22.5 years
+  • Sampled 3330 points globally
+  • Analyzed 11 regions in detail
+  • Global mean trend: -0.168 cm/year
+  • Strongest loss: -117.59 cm/year
+  • Strongest gain: 6.32 cm/year
+
+🗺️ Use the interactive map above to explore any region in detail!
+   Red = Water loss | Blue = Water gain | White = Stable
